@@ -196,37 +196,37 @@ class linkedlist:
                 return
         print("No cycle detected.")
 
-        def remove_cycle(self):
-            if self.head is None:
-                print("List is empty.")
-                return
-            
-            slow = self.head
-            fast = self.head
+    def remove_cycle(self):
+        if self.head is None:
+            print("List is empty.")
+            return
+        
+        slow = self.head
+        fast = self.head
 
-            while fast and fast.next:
-                slow = slow.next
-                fast = fast.next.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
 
-                if slow == fast:
-                    break
-
-            else:
-                print("No cycle detected.")
-                return
-            
-            slow = self.head
             if slow == fast:
-                while fast.next != slow:
-                    fast = fast.next
-                fast.next = None
+                break
 
-            else:
-                while slow.next !=fast.next:
-                    show = slow.next
-                    fast = fast.next
+        else:
+            print("No cycle detected.")
+            return
+        
+        slow = self.head
+        if slow == fast:
+            while fast.next != slow:
+                fast = fast.next
             fast.next = None
-            print("Cycle removed.")
+
+        else:
+            while slow.next !=fast.next:
+                show = slow.next
+                fast = fast.next
+        fast.next = None
+        print("Cycle removed.")
 
 
     def print_list(self):
