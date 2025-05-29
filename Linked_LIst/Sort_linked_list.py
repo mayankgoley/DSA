@@ -86,10 +86,16 @@ class LinkedList:
         
         slow = self.head
         fast = self.head
+        prev = None
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-        return slow.data
+        
+        if prev:
+            prev.next = None
+        
+        return slow
+
     
 
 
