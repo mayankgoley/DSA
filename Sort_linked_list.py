@@ -79,5 +79,19 @@ class LinkedList:
             current = current.next
         print("None")
 
+    def find_middle(self):
+        if self.head is None:
+            print("List is empty.")
+            return
+        
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow.data
+    
+
+
     
 
