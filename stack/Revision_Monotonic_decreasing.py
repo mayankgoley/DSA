@@ -12,8 +12,8 @@ def next_greater_element(arr):
         # the element at the top index of the stack (i.e., arr[stack[-1]]):
         # → This means we've found a "next greater element" for the index on top of the stack.
         while stack and arr[i] > arr[stack[-1]]:
-            top_index = stack.pop()
-            result[top_index] = arr[i]
+            top_index = stack.pop()  #We remove (pop) the index from the top of the stack. This is the index of the element whose next greater we just found.
+            result[top_index] = arr[i] 
         stack.append(i)
     return result
 
