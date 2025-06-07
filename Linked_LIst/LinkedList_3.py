@@ -7,7 +7,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def inseert_at_beg(self, data):
+    def insert_at_beg(self, data):
         new_node = Node(data)
 
         new_node.next = self.head

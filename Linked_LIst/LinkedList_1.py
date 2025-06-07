@@ -70,7 +70,7 @@ class LinkedList:
             print("List is empty.")
             return
         
-        if self.head.next is none:
+        if self.head.next is None:
             self.head = None
             return
         
