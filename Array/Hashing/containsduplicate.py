@@ -9,3 +9,4 @@ def containsduplicate(nums):
 
 nums = [1, 2, 3, 1]
 print(containsduplicate(nums))
+
