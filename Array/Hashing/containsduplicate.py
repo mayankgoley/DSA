@@ -1,10 +1,10 @@
 def containsduplicate(nums):
-    seen = {}
+    seen = set()
 
-    for i , num in enumerate(nums):
+    for num in nums:
         if num in seen:
             return True
-        seen[num] = i
+        seen.add(num)
     return False
 
 nums = [1, 2, 3, 1]
